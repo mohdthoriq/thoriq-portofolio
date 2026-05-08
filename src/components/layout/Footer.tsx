@@ -1,14 +1,14 @@
 import { motion } from 'motion/react';
 import { Mail } from 'lucide-react';
-import github from "../../assets/github.png";
-import linkedin from "../../assets/social.png";
-import instagram from "../../assets/instagram.png";
+import github from "../../assets/social/github.png";
+import linkedin from "../../assets/social/social.png";
+import instagram from "../../assets/social/instagram.png";
 
 export default function Footer() {
   const SOCIAL_LINKS = [
-    { name: 'LinkedIn', icon: linkedin, href: '#' },
-    { name: 'Github', icon: github, href: '#' },
-    { name: 'Instagram', icon: instagram, href: '#' }
+    { name: 'LinkedIn', icon: linkedin, href: 'https://www.linkedin.com/in/muhammad-thoriq-7744b1377' },
+    { name: 'Github', icon: github, href: 'https://github.com/mohdthoriq' },
+    { name: 'Instagram', icon: instagram, href: 'https://www.instagram.com/mohd_thoriq/' }
   ];
 
   return (
@@ -38,7 +38,7 @@ export default function Footer() {
               Saya selalu terbuka untuk kolaborasi menarik, proyek baru, atau sekadar berbincang tentang teknologi. Jangan ragu untuk menyapa!
             </p>
             <a
-              href="mailto:mohdthoriq24@gmail.com"
+              href="mailto:mohdthoriq24@gmail.com?subject=Project Inquiry&body=Hello Thoriq,"
               className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-all group"
             >
               <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />

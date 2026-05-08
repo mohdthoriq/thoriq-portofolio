@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background Tailwind blue-600 dengan rounded-lg -->
+  <rect width="512" height="512" rx="112" fill="#2563eb" />
+  
+  <!-- Huruf T di tengah -->
+  <text 
+    x="50%" 
+    y="50%" 
+    font-family="system-ui, -apple-system, sans-serif" 
+    font-weight="bold" 
+    font-size="360" 
+    fill="white" 
+    text-anchor="middle" 
+    dominant-baseline="central"
+    dy="10"
+  >
+    T
+  </text>
+</svg>

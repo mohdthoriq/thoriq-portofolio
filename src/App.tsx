@@ -3,6 +3,9 @@ import Navbar from './components/layout/Navbar';
 import SectionTitle from './components/ui/sectionTitle';
 import { PROJECTS, SKILLS, EXPERIENCES } from './data';
 import Footer from './components/layout/Footer';
+import port1 from './assets/port1.jpeg'
+
+const image = port1;
 
 export default function App() {
   return (
@@ -53,7 +56,7 @@ export default function App() {
               <div className="absolute inset-0 bg-blue-600/20 blur-[60px] rounded-full group-hover:bg-blue-600/30 transition-all" />
               <div className="relative w-full h-full rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000" 
+                  src={image} 
                   alt="Thoriq" 
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
                 />
@@ -64,7 +67,7 @@ export default function App() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-6 -right-6 bg-zinc-900 border border-white/10 p-4 rounded-2xl shadow-xl"
               >
-                <div className="text-blue-500 font-bold text-xl">2+ Years</div>
+                <div className="text-blue-500 font-bold text-xl">1+ Years</div>
                 <div className="text-zinc-500 text-xs uppercase tracking-widest font-bold">Experience</div>
               </motion.div>
             </motion.div>
@@ -145,7 +148,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <SectionTitle subtitle="Showcase">Featured Work</SectionTitle>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {PROJECTS.map((project, i) => (
+            {PROJECTS.length > 0? PROJECTS.map((project, i) => (
               <motion.div 
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,7 +186,9 @@ export default function App() {
                   </p>
                 </div>
               </motion.div>
-            ))}
+            )) : (
+              <div className="text-zinc-500 italic">Projects details coming soon...</div>
+            )}
           </div>
         </div>
       </section>
