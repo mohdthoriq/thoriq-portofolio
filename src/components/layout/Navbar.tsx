@@ -32,7 +32,7 @@ export default function Navbar() {
           {['About', 'Skills', 'Experience', 'Projects'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`${item.toLowerCase()}`}
               className="text-sm font-medium text-zinc-400 hover:text-white transition-colors"
             >
               {item}
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         <motion.a
-          href="#contact"
+          href="contact"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="bg-white/10 border border-white/20 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-bold hover:bg-white hover:text-black transition-all cursor-pointer"
