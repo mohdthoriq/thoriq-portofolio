@@ -1,5 +1,3 @@
-import { motion } from 'motion/react';
-import { Mail } from 'lucide-react';
 import github from "../../assets/social/github.png";
 import linkedin from "../../assets/social/social.png";
 import instagram from "../../assets/social/instagram.png";
