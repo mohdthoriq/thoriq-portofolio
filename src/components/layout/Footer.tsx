@@ -3,6 +3,8 @@ import { Mail } from 'lucide-react';
 import github from "../../assets/social/github.png";
 import linkedin from "../../assets/social/social.png";
 import instagram from "../../assets/social/instagram.png";
+import logo from "../../assets/logo.png"
+
 
 export default function Footer() {
   const SOCIAL_LINKS = [
@@ -12,7 +14,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="relative pt-32 pb-12 px-6 border-t border-zinc-800 overflow-hidden scroll-mt-24">
+    <footer id="contact" className="relative pt-32 pb-6 px-6 border-t border-zinc-800 overflow-hidden scroll-mt-24">
       {/* Background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full" />
@@ -21,15 +23,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
           <div>
-            <motion.div
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-2xl mb-8 cursor-pointer shadow-lg shadow-blue-600/20"
-            >
-              T
-            </motion.div>
+            <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center font-bold text-xl"><img src={logo} alt="logo" /></div>
             <h2 className="text-4xl md:text-6xl font-display font-extrabold mb-6 tracking-tighter leading-tight">
               LET'S BUILD SOMETHING <br />
               <span className="italic text-blue-500">GREAT</span> TOGETHER.
@@ -37,13 +31,6 @@ export default function Footer() {
             <p className="text-zinc-400 text-lg max-w-md mb-8 py-2">
               Saya selalu terbuka untuk kolaborasi menarik, proyek baru, atau sekadar berbincang tentang teknologi. Jangan ragu untuk menyapa!
             </p>
-            <a
-              href="mailto:mohdthoriq24@gmail.com?subject=Project Inquiry&body=Hello Thoriq,"
-              className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold hover:scale-105 transition-all group"
-            >
-              <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              SAY HELLO
-            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-12">
@@ -80,7 +67,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="pt-6 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-zinc-500 text-xs font-bold uppercase tracking-widest">
             © {new Date().getFullYear()} MUHAMMAD THORIQ — ALL RIGHTS RESERVED
           </div>

@@ -9,7 +9,7 @@ const image = port1;
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-black text-white font-sans selection:bg-blue-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-black text-white font-sans selection:bg-blue-500/30 selection:text-white scrollbar-hide">
       {/* Background decoration */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full" />
@@ -36,14 +36,6 @@ export default function App() {
                 I am a programmer who is currently active in creating and continuously exploring the vast world of technology. 
                 Focused on digital development, I believe that every line of code is a step towards meaningful innovation.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <a href="#projects" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold transition-all hover:scale-105 flex items-center justify-center">
-                  VIEW MY PROJECTS
-                </a>
-                <a href="#contact" className="bg-white/5 border border-white/10 hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold transition-all">
-                  GET IN TOUCH
-                </a>
-              </div>
             </motion.div>
 
             <motion.div
