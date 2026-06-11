@@ -48,7 +48,7 @@ export default function Footer() {
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact</h4>
               <ul className="space-y-4 text-sm font-medium text-zinc-500">
                 <li>Jakarta, Indonesia</li>
-                <li><a href="mailto:[EMAIL_ADDRESS]" className="hover:text-white transition-colors">mohdthoriq24@gmail.com</a></li>
+                <li><a href="mailto:[EMAIL_ADDRESS]" className="hover:text-white transition-colors">mohdthoriq335@gmail.com</a></li>
                 <li className="flex gap-4 pt-4">
                   {SOCIAL_LINKS.map(social => (
                     <a 
