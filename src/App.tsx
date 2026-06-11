@@ -157,7 +157,9 @@ export default function App() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                     <a 
-                      href={project.link} 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer" 
                       className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:scale-105 transition-transform"
                     >
                       VIEW PROJECT

@@ -1,7 +1,19 @@
 import { Cpu, Database, Layout } from 'lucide-react';
 import type { Project, Experience, SkillCategory } from '../types';
+import gambar1 from "../../src/assets/image/image1.png";
+// import gambar2 from "../../public/image/image2.png";
+// import gambar3 from "../../public/image/image3.png";
+
 
 export const PROJECTS: Project[] = [
+  {
+    id: 1,
+    title: "SimakWeb.be",
+    description: "Sistem manajemen sekolah dan siswa. Memiliki fitur pelacakan kehadiran, profil siswa, dan sistem pengumpulan tugas.",
+    image: gambar1,
+    tags: ["Node.js", "TypeScript", "Prisma ORM"],
+    link: "https://simakweb-fe.vercel.app/"
+  }
   // {
   //   id: 1,
   //   title: "SIAmanah",
@@ -18,14 +30,6 @@ export const PROJECTS: Project[] = [
   //   tags: ["TypeScript", "REST API", "Database Design"],
   //   link: "#"
   // },
-  // {
-  //   id: 3,
-  //   title: "SimakWeb.be",
-  //   description: "Sistem manajemen sekolah dan siswa. Memiliki fitur pelacakan kehadiran, profil siswa, dan sistem pengumpulan tugas.",
-  //   image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1000",
-  //   tags: ["Node.js", "TypeScript", "Prisma ORM"],
-  //   link: "#"
-  // }
 ];
 
 export const SKILLS: SkillCategory[] = [
