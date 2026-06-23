@@ -15,8 +15,23 @@ export interface Experience {
   description: string;
 }
 
+export interface JobRole {
+  role: string;
+  type: string;
+  period: string;
+  duration: string;
+  location: string;
+  description: string[];
+}
+
+export interface CompanyExperience {
+  company: string;
+  jobs: JobRole[];
+}
+
 export interface SkillCategory {
   title: string;
   icon: React.ReactNode;
   skills: string[];
 }
+
