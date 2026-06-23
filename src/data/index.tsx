@@ -1,5 +1,5 @@
 import { Cpu, Database, Layout } from 'lucide-react';
-import type { Project, Experience, SkillCategory } from '../types';
+import type { Project, Experience, CompanyExperience, SkillCategory } from '../types';
 import gambar1 from "../../src/assets/image/image1.png";
 // import gambar2 from "../../public/image/image2.png";
 // import gambar3 from "../../public/image/image3.png";
@@ -12,24 +12,8 @@ export const PROJECTS: Project[] = [
     description: "Sistem manajemen sekolah dan siswa. Memiliki fitur pelacakan kehadiran, profil siswa, dan sistem pengumpulan tugas.",
     image: gambar1,
     tags: ["Node.js", "TypeScript", "Prisma ORM"],
-    link: "https://simakweb-fe.vercel.app/"
+    link: "https://github.com/Rumah-IT/simakweb.be"
   }
-  // {
-  //   id: 1,
-  //   title: "SIAmanah",
-  //   description: "Platform fundraising dan donasi terintegrasi dengan sistem pembayaran Midtrans, fitur pembuatan kampanye, dan manajemen penarikan dana.",
-  //   image: "https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&q=80&w=1000",
-  //   tags: ["Node.js", "TypeScript", "Prisma ORM"],
-  //   link: "#"
-  // },
-  // {
-  //   id: 2,
-  //   title: "The Master Tailor",
-  //   description: "Platform e-commerce custom untuk gudang seragam. Mendukung manajemen varian produk kompleks untuk seragam sekolah dan pramuka.",
-  //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
-  //   tags: ["TypeScript", "REST API", "Database Design"],
-  //   link: "#"
-  // },
 ];
 
 export const SKILLS: SkillCategory[] = [
@@ -50,19 +34,23 @@ export const SKILLS: SkillCategory[] = [
   }
 ];
 
-export const EXPERIENCES: Experience[] = [
-  // {
-  //   id: 1,
-  //   period: "2025 - Present",
-  //   company: "Thoriq.dev",
-  //   role: "Freelance Fullstack Developer",
-  //   description: "Leading the development of microservices architecture, optimizing PostgreSQL queries, and implementing real-time data processing."
-  // },
-  // {
-  //   id: 2,
-  //   period: "2024 - 2025",
-  //   company: "Universitas Sultan Ageng Tirtayasa",
-  //   role: "Freelance Fullstack Developer",
-  //   description: "Developed various web applications using React and Node.js, managed cloud deployments on AWS, and mentored junior developers."
-  // }
+export const EXPERIENCES: Experience[] = [];
+
+export const COMPANY_EXPERIENCES: CompanyExperience[] = [
+  {
+    company: "Pondok IT",
+    jobs: [
+      {
+        role: "Mentor",
+        type: "On-site · Contract",
+        period: "July 2026 — Present",
+        duration: "11 mos",
+        location: "Bantul Regency, Yogyakarta, Indonesia",
+        description: [
+          "Guiding students in learning web development from the basics to developing real-world projects."
+        ]
+      }
+    ]
+  }
 ];
+

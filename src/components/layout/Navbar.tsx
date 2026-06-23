@@ -32,7 +32,7 @@ export default function Navbar() {
         </motion.div>
 
         <div className="bg-white/5 backdrop-blur-sm border-white/10 px-6 py-2 rounded-full hidden md:flex items-center gap-8">
-          {['About', 'Skills', 'Experience', 'Projects'].map((item) => (
+          {['About', 'Skills', 'Experience', 'Projects', 'Playground'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
