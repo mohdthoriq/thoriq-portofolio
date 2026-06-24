@@ -1,5 +1,4 @@
 import { motion } from 'motion/react';
-import SectionTitle from '../ui/sectionTitle';
 import { SKILLS } from '../../data';
 
 export default function Skills() {
@@ -8,8 +7,14 @@ export default function Skills() {
       {/* Subtle background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <SectionTitle subtitle="Capabilities">My Technical Stack</SectionTitle>
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Section Heading */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight !text-blue-500">
+            My Technical Stack
+          </h2>
+          <div className="h-[1px] bg-zinc-800 flex-grow ml-4 max-w-xs" />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {SKILLS.map((cat, i) => (
             <motion.div

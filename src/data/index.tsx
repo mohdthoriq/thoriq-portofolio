@@ -1,7 +1,7 @@
 import { Cpu, Database, Layout } from 'lucide-react';
 import type { Project, Experience, CompanyExperience, SkillCategory } from '../types';
 import gambar1 from "../../src/assets/image/image1.png";
-// import gambar2 from "../../public/image/image2.png";
+import gambar2 from "../../src/assets/image/image2.png";
 // import gambar3 from "../../public/image/image3.png";
 
 
@@ -13,6 +13,14 @@ export const PROJECTS: Project[] = [
     image: gambar1,
     tags: ["Node.js", "TypeScript", "Prisma ORM"],
     link: "https://github.com/Rumah-IT/simakweb.be"
+  },
+  {
+    id: 2,
+    title: 'ShopCart',
+    description: 'Sistem E-Commerce dengan fitur keranjang belanja, checkout, dan pembayaran',
+    image: gambar2,
+    tags: ["react.js"],
+    link: "https://github.com/mohdthoriq/ShopCart"
   }
 ];
 

@@ -1,12 +1,17 @@
 import { motion } from 'motion/react';
-import SectionTitle from '../ui/sectionTitle';
 import { PROJECTS } from '../../data';
 
 export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6 bg-zinc-900/30 border-t border-zinc-800 scroll-mt-24">
-      <div className="max-w-7xl mx-auto">
-        <SectionTitle subtitle="Showcase">Featured Work</SectionTitle>
+      <div className="max-w-5xl mx-auto">
+        {/* Section Heading */}
+        <div className="flex items-center gap-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight !text-blue-500">
+            Featured Work
+          </h2>
+          <div className="h-[1px] bg-zinc-800 flex-grow ml-4 max-w-xs" />
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {PROJECTS.length > 0 ? PROJECTS.map((project, i) => (
             <motion.div 
