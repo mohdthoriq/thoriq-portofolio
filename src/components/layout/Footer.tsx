@@ -27,7 +27,7 @@ export default function Footer() {
               <span className="italic text-blue-500">GREAT</span> TOGETHER.
             </h2>
             <p className="text-zinc-400 text-lg max-w-md mb-8 py-2">
-              Saya selalu terbuka untuk kolaborasi menarik, proyek baru, atau sekadar berbincang tentang teknologi. Jangan ragu untuk menyapa!
+              I'm always open to collaboration, new projects, or just chatting about technology. Don't hesitate to say hello!.
             </p>
           </div>
 
@@ -48,12 +48,12 @@ export default function Footer() {
               <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact</h4>
               <ul className="space-y-4 text-sm font-medium text-zinc-500">
                 <li>Jakarta, Indonesia</li>
-                <li><a href="mailto:[EMAIL_ADDRESS]" className="hover:text-white transition-colors">mohdthoriq335@gmail.com</a></li>
+                <li><a href="mailto:[EMAIL_ADDRESS]" className="hover:text-white transition-colors">mohdthoriq24@gmail.com</a></li>
                 <li className="flex gap-4 pt-4">
                   {SOCIAL_LINKS.map(social => (
-                    <a 
-                      key={social.name} 
-                      href={social.href} 
+                    <a
+                      key={social.name}
+                      href={social.href}
                       className="w-10 h-10 bg-white/5 border border-white/10 rounded-full flex items-center justify-center hover:bg-white/10 hover:border-white/20 transition-all group"
                     >
                       <img src={social.icon} alt={social.name} className="w-4 h-4 invert opacity-50 group-hover:opacity-100 transition-opacity" />
