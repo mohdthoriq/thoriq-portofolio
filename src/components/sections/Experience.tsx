@@ -17,7 +17,7 @@ export default function Experience() {
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-16">
           {/* <span className="font-mono text-xl md:text-2xl text-cyan-400 font-bold">02.</span> */}
-          <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight !text-blue-500">
             My Experiences
           </h2>
           <div className="h-[1px] bg-zinc-800 flex-grow ml-4 max-w-xs" />

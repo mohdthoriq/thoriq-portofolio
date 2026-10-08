@@ -22,7 +22,7 @@ export default function Projects() {
         </p>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
           {PROJECTS.length > 0 ? PROJECTS.map((project, i) => (
             <motion.div
               key={project.id}
