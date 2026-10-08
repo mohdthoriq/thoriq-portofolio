@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
-import image from '../../assets/port1.jpeg';
+import image from '../../assets/foto-personal.png';
+
 
 export default function Hero() {
   return (
-    <section id="about" className="min-h-screen pt-32 pb-20 px-6 flex flex-col justify-center scroll-mt-24">
+    <section id="about" className="min-h-screen pt-32 pb-20 px-6 flex flex-col justify-center scroll-mt-24 relative">
       <div className="max-w-7xl mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
@@ -12,11 +13,11 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <span className="text-blue-500 font-bold tracking-widest text-sm uppercase mb-4 block italic">Software Developer</span>
-            <h1 className="text-4xl md:text-6xl font-display font-extrabold mb-8 tracking-tighter leading-tight">
-              HI, I'M <span className="text-blue-600">Muhammad Thoriq.</span> <br />
-              <span className="text-zinc-500 text-3xl md:text-4xl">I Create Digital Solutions with Passion.</span>
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-8 tracking-tight leading-tight text-slate-100">
+              HI, I'M <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Muhammad Thoriq.</span> <br />
+              <span className="text-slate-400 text-3xl md:text-4xl font-semibold">I Create Digital Solutions with Passion.</span>
             </h1>
-            <p className="text-zinc-400 text-lg md:text-lg max-w-2xl mb-12 leading-relaxed">
+            <p className="text-slate-400 text-lg max-w-2xl mb-12 leading-relaxed">
               I am a programmer who is currently active in creating and continuously exploring the vast world of technology. 
               Focused on digital development, I believe that every line of code is a step towards meaningful innovation.
             </p>
@@ -28,23 +29,23 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative aspect-square max-w-md mx-auto lg:ml-auto group"
           >
-            {/* Decorative background for photo */}
-            <div className="absolute inset-0 bg-blue-600/20 blur-[60px] rounded-full group-hover:bg-blue-600/30 transition-all" />
-            <div className="relative w-full h-full rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            {/* Decorative background glow for photo */}
+            <div className="absolute inset-0 bg-blue-600/20 blur-[70px] rounded-full group-hover:bg-blue-600/30 transition-all pointer-events-none" />
+            <div className="relative w-100 h-100 rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <img 
                 src={image} 
                 alt="Thoriq" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
               />
             </div>
-            {/* Floating badges */}
+            {/* Floating badge */}
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-6 bg-zinc-900 border border-white/10 p-4 rounded-2xl shadow-xl"
+              className="absolute -bottom-6 -right-6 glass-panel p-4 rounded-2xl shadow-xl border border-white/10"
             >
-              <div className="text-blue-500 font-bold text-xl">1+ Years</div>
-              <div className="text-zinc-500 text-xs uppercase tracking-widest font-bold">Experience</div>
+              <div className="text-blue-400 font-bold text-xl">1+ Years</div>
+              <div className="text-slate-400 text-xs uppercase tracking-widest font-bold">Experience</div>
             </motion.div>
           </motion.div>
         </div>
@@ -52,3 +53,4 @@ export default function Hero() {
     </section>
   );
 }
+

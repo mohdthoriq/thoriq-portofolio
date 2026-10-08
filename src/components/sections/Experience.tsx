@@ -9,7 +9,7 @@ export default function Experience() {
   const activeCompany = COMPANY_EXPERIENCES[activeTab];
 
   return (
-    <section id="experience" className="py-28 px-6 bg-black scroll-mt-24 relative overflow-hidden">
+    <section id="experience" className="py-28 px-6 scroll-mt-24 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[300px] bg-cyan-500/5 blur-[120px] rounded-full pointer-events-none" />
 
@@ -33,11 +33,10 @@ export default function Experience() {
                 <button
                   key={exp.company}
                   onClick={() => setActiveTab(idx)}
-                  className={`relative text-left px-5 py-4 text-sm font-medium transition-all duration-300 whitespace-nowrap md:whitespace-normal outline-none focus:outline-none ${
-                    isActive 
-                      ? 'text-cyan-400 bg-cyan-950/10' 
+                  className={`relative text-left px-5 py-4 text-sm font-medium transition-all duration-300 whitespace-nowrap md:whitespace-normal outline-none focus:outline-none ${isActive
+                      ? 'text-cyan-400 bg-cyan-950/10'
                       : 'text-zinc-500 hover:text-zinc-200 hover:bg-zinc-900/30'
-                  }`}
+                    }`}
                 >
                   {/* Sliding selection bar */}
                   {isActive && (
@@ -90,7 +89,7 @@ export default function Experience() {
                           <Briefcase className="w-3.5 h-3.5 text-zinc-500" />
                           {job.type}
                         </span>
-                        
+
                         <span className="text-zinc-600 hidden md:inline">•</span>
 
                         <span className="flex items-center gap-1">
