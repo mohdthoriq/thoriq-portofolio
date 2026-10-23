@@ -8,19 +8,19 @@ import gambar2 from "../../src/assets/image/image2.png";
 export const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "SimakWeb.be",
-    description: "Sistem manajemen sekolah dan siswa. Memiliki fitur pelacakan kehadiran, profil siswa, dan sistem pengumpulan tugas.",
+    title: "Hotel Multazam",
+    description: "Sistem reservasi kamar hotel dengan fitur pembayaran dan manajemen kamar.",
     image: gambar1,
-    tags: ["Node.js", "TypeScript", "Prisma ORM"],
-    link: "https://github.com/Rumah-IT/simakweb.be"
+    tags: ["Node.js", "React.js"],
+    link: "https://hotel-multazam.vercel.app"
   },
   {
     id: 2,
-    title: 'ShopCart',
-    description: 'Sistem E-Commerce dengan fitur keranjang belanja, checkout, dan pembayaran',
+    title: 'scm manajemen',
+    description: 'Supply Chain Management untuk gudang,',
     image: gambar2,
-    tags: ["react.js"],
-    link: "https://github.com/mohdthoriq/ShopCart"
+    tags: ["Next.js"],
+    link: "https://scm-manajemen.vercel.app"
   }
 ];
 
