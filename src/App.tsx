@@ -9,7 +9,7 @@ import Projects from './components/sections/Projects';
 
 export default function App() {
   return (
-    <div className="relative min-h-screen bg-[var(--bg-main)] text-slate-100 font-sans selection:bg-blue-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-[var(--bg-main)] text-slate-100 font-sans selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
       {/* Seamless Ambient Background Glowing Orbs */}
       <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
         <div className="absolute top-[-10%] left-[-10%] w-[55vw] h-[55vw] max-w-[700px] max-h-[700px] bg-blue-600/10 blur-[140px] rounded-full" />
@@ -19,7 +19,7 @@ export default function App() {
 
       <Navbar />
 
-      <main className="relative z-10">
+      <main className="relative z-10 overflow-x-hidden">
         <Hero />
         <Skills />
         <Experience />

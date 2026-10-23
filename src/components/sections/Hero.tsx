@@ -27,11 +27,11 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative aspect-square max-w-md mx-auto lg:ml-auto group"
+            className="relative aspect-square w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto lg:ml-auto group"
           >
             {/* Decorative background glow for photo */}
             <div className="absolute inset-0 bg-blue-600/20 blur-[70px] rounded-full group-hover:bg-blue-600/30 transition-all pointer-events-none" />
-            <div className="relative w-100 h-100 rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <img 
                 src={image} 
                 alt="Thoriq" 
@@ -42,10 +42,10 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -right-6 glass-panel p-4 rounded-2xl shadow-xl border border-white/10"
+              className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 glass-panel p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/10"
             >
-              <div className="text-blue-400 font-bold text-xl">1+ Years</div>
-              <div className="text-slate-400 text-xs uppercase tracking-widest font-bold">Experience</div>
+              <div className="text-blue-400 font-bold text-lg sm:text-xl">1+ Years</div>
+              <div className="text-slate-400 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Experience</div>
             </motion.div>
           </motion.div>
         </div>
