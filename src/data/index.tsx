@@ -2,7 +2,7 @@ import { Cpu, Database, Layout } from 'lucide-react';
 import type { Project, Experience, CompanyExperience, SkillCategory } from '../types';
 import gambar1 from "../../src/assets/image/image1.png";
 import gambar2 from "../../src/assets/image/image2.png";
-// import gambar3 from "../../public/image/image3.png";
+import gambar3 from "../../src/assets/image/image3.png";
 
 
 export const PROJECTS: Project[] = [
@@ -21,6 +21,14 @@ export const PROJECTS: Project[] = [
     image: gambar2,
     tags: ["Next.js"],
     link: "https://scm-manajemen.vercel.app"
+  },
+  {
+    id: 3,
+    title: 'Shop-cart',
+    description: 'Sistem Point of Sale untuk toko.',
+    image: gambar3,
+    tags: ["react.js"],
+    link: "https://shop-cart-ten-sable.vercel.app/"
   }
 ];
 
