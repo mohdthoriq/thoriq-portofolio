@@ -10,7 +10,7 @@ export default function Skills() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
             Skills & Technologies
           </h2>
           <div className="h-[1px] bg-white/10 flex-grow max-w-xs ml-2" />
@@ -21,8 +21,8 @@ export default function Skills() {
           Here are a few technologies I've been working with recently:
         </p>
 
-        {/* Skills Grid */}
-        <div className="flex flex-wrap items-center gap-y-8">
+        {/* Skills List with Shadcn Card */}
+        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
           {DATA_SKILLS.map((skill, i) => {
             const Icon = skill.icon;
             return (
@@ -31,12 +31,10 @@ export default function Skills() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.06, duration: 0.4 }}
-                whileHover={{ y: -6, scale: 1.05 }}
-                className={`group relative flex flex-col items-center justify-center p-4 rounded-2xl transition-all duration-300 cursor-pointer`}
+                transition={{ delay: i * 0.05, duration: 0.3 }}
+                whileHover={{ y: -6, scale: 1.08 }}
               >
-                {/* Icon */}
-                <Icon className={`w-8 h-8 text-cyan-300/80 transition-colors duration-300`} />
+                <Icon className="w-8 h-8 text-cyan-300/80 transition-colors duration-300" />
               </motion.div>
             );
           })}
