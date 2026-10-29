@@ -1,6 +1,4 @@
 import { motion } from 'motion/react';
-import image from '../../assets/foto-personal.png';
-
 
 export default function Hero() {
   return (
@@ -33,7 +31,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-blue-600/20 blur-[70px] rounded-full group-hover:bg-blue-600/30 transition-all pointer-events-none" />
             <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <img 
-                src={image} 
+                src='https://res.cloudinary.com/djls97ux0/image/upload/v1793240070/portfolio/foto-personal.png'
                 alt="Thoriq" 
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100"
               />
@@ -42,7 +40,7 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 glass-panel p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/10"
+              className="absolute -bottom-4 right-0 sm:-bottom-6 sm:-right-6 glass-panel p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-xl border"
             >
               <div className="text-blue-400 font-bold text-lg sm:text-xl">1+ Years</div>
               <div className="text-slate-400 text-[10px] sm:text-xs uppercase tracking-widest font-bold">Experience</div>
@@ -53,4 +51,3 @@ export default function Hero() {
     </section>
   );
 }
-

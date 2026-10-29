@@ -1,8 +1,5 @@
 import { Cpu, Database, Layout } from 'lucide-react';
 import type { Project, Experience, CompanyExperience, SkillCategory } from '../types';
-import gambar1 from "../../src/assets/image/image1.png";
-import gambar2 from "../../src/assets/image/image2.png";
-import gambar3 from "../../src/assets/image/image3.png";
 
 
 export const PROJECTS: Project[] = [
@@ -10,7 +7,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     title: "Hotel Multazam",
     description: "Sistem reservasi kamar hotel dengan fitur pembayaran dan manajemen kamar.",
-    image: gambar1,
+    image: 'https://res.cloudinary.com/djls97ux0/image/upload/v1793239620/portfolio/image1.png',
     tags: ["Node.js", "React.js"],
     link: "https://hotel-multazam.vercel.app"
   },
@@ -18,7 +15,7 @@ export const PROJECTS: Project[] = [
     id: 2,
     title: 'scm manajemen',
     description: 'Supply Chain Management untuk gudang,',
-    image: gambar2,
+    image: 'https://res.cloudinary.com/djls97ux0/image/upload/v1793239621/portfolio/image2.png',
     tags: ["Next.js"],
     link: "https://scm-manajemen.vercel.app"
   },
@@ -26,7 +23,7 @@ export const PROJECTS: Project[] = [
     id: 3,
     title: 'Shop-cart',
     description: 'Sistem Point of Sale untuk toko.',
-    image: gambar3,
+    image: 'https://res.cloudinary.com/djls97ux0/image/upload/v1793239623/portfolio/image3.png',
     tags: ["react.js"],
     link: "https://shop-cart-ten-sable.vercel.app/"
   }
@@ -69,4 +66,5 @@ export const COMPANY_EXPERIENCES: CompanyExperience[] = [
     ]
   }
 ];
+
 
