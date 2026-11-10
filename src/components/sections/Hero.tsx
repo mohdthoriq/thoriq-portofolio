@@ -20,7 +20,7 @@ export default function Hero() {
           >
 
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight text-slate-100">
-              HI, I'M <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">Muhammad Thoriq.</span> <br />
+              HI, I'M <span className="text-blue-500">Muhammad Thoriq.</span> <br />
               <span className="text-slate-400 text-3xl md:text-4xl font-semibold">I Create Digital Solutions with Passion.</span>
             </h1>
 
@@ -62,11 +62,11 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative aspect-square w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto lg:ml-auto group"
+            className="relative aspect-square w-full max-w-[220px] sm:max-w-[260px] md:max-w-[280px] mx-auto lg:ml-auto group"
           >
             {/* Decorative background glow for photo */}
-            <div className="absolute inset-0 bg-blue-600/20 blur-[70px] rounded-full group-hover:bg-blue-600/30 transition-all pointer-events-none" />
-            <div className="relative w-full h-full rounded-[2.5rem] sm:rounded-[3rem] overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
+            <div className="absolute inset-0 bg-blue-600/20 blur-[50px] rounded-full group-hover:bg-blue-600/30 transition-all pointer-events-none" />
+            <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 rotate-3 group-hover:rotate-0 transition-transform duration-500 shadow-2xl">
               <img 
                 src={image} 
                 alt="Thoriq" 

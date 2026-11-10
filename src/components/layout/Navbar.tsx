@@ -50,7 +50,7 @@ export default function Navbar() {
         </motion.div>
 
         {/* Desktop Navigation using Shadcn Buttons within a Pill Card */}
-        <Card className="hidden md:flex items-center gap-1 p-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border-white/10 shadow-lg">
+        <Card className="hidden md:flex items-center gap-1 p-1.5 rounded-24px bg-slate-900/60 backdrop-blur-md border-white/10 shadow-lg">
           {navItems.map((item) => (
             <Button
               key={item}

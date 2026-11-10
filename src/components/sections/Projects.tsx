@@ -7,7 +7,6 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
 } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
@@ -60,7 +59,6 @@ export default function Projects() {
                           className="text-xs font-semibold gap-1.5 backdrop-blur-md bg-white/20 hover:bg-white/30 text-white"
                           onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
                         >
-                          <span>Live Preview</span>
                           <ExternalLink className="w-3.5 h-3.5" />
                         </Button>
                       </div>
@@ -87,17 +85,6 @@ export default function Projects() {
                       </CardDescription>
                     </CardContent>
                   </div>
-
-                  <CardFooter className="pt-2">
-                    <Button
-                      variant="outline"
-                      className="w-full justify-center gap-2 border-white/10 hover:bg-blue-600 hover:border-blue-600 text-slate-200 hover:text-white transition-all text-xs"
-                      onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
-                    >
-                      <span>Lihat Detail Project</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </Button>
-                  </CardFooter>
                 </Card>
               </motion.div>
             ))
