@@ -4,9 +4,14 @@ import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
+import { useLanguage } from '../../context/LanguageContext';
+import { TRANSLATIONS } from '../../data/translations';
 import logo from '../../assets/logo.png';
 
 export default function Footer() {
+  const { language } = useLanguage();
+  const t = TRANSLATIONS[language].footer;
+
   const SOCIAL_LINKS = [
     {
       name: 'LinkedIn',
@@ -35,39 +40,39 @@ export default function Footer() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full" />
       </div>
 
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16 items-start">
           {/* Left Col: Headline & Bio */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-6">
-              <Card className="w-11 h-auto flex items-center justify-center">
+              <Card className="w-11 h-11 p-2 bg-slate-900 border-white/10 rounded-xl flex items-center justify-center shadow-inner">
                 <img src={logo} alt="logo" className="w-full h-full object-contain" />
               </Card>
               <Badge variant="secondary" className="text-xs font-semibold px-3 py-1 bg-white/5 border-white/10 text-slate-300">
-                Open for Collaboration
+                {t.collab}
               </Badge>
             </div>
 
             <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-slate-100 mb-5">
-              LET'S BUILD SOMETHING <br />
+              {t.headline1} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">
-                GREAT
+                {t.headline2}
               </span>{' '}
-              TOGETHER.
+              {t.headline3}
             </div>
 
             <p className="text-slate-400 text-base sm:text-lg max-w-lg mb-8 leading-relaxed">
-              I'm always open to collaboration, new projects, or just chatting about technology. Don't hesitate to say hello!
+              {t.description}
             </p>
 
             <Button
-              className="gap-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20 font-medium px-6 py-2.5"
+              className="gap-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20 font-medium px-6 py-2.5 cursor-pointer"
               onClick={() => {
                 window.location.href = 'mailto:mohdthoriq24@gmail.com';
               }}
             >
               <HiOutlineMail className="w-5 h-5" />
-              <span>Say Hello via Email</span>
+              <span>{t.sayHello}</span>
             </Button>
           </div>
 
@@ -76,7 +81,7 @@ export default function Footer() {
             <Card className="bg-slate-900/40 backdrop-blur-sm border-white/10 hover:border-white/20 transition-all">
               <CardHeader className="p-6 pb-3">
                 <CardTitle className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                  Get In Touch
+                  {t.getInTouch}
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-6 pt-2 space-y-4 text-sm text-slate-400">
@@ -84,7 +89,7 @@ export default function Footer() {
                   <Badge variant="secondary" className="p-2 bg-white/5 border-white/10 text-cyan-400 rounded-lg">
                     <HiOutlineLocationMarker className="w-4 h-4" />
                   </Badge>
-                  <span className="text-slate-300 text-sm">Jakarta, Indonesia</span>
+                  <span className="text-slate-300 text-sm">{t.location}</span>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -93,7 +98,7 @@ export default function Footer() {
                   </Badge>
                   <Button
                     variant="link"
-                    className="h-auto p-0 text-slate-300 hover:text-cyan-400 text-sm truncate font-normal"
+                    className="h-auto p-0 text-slate-300 hover:text-cyan-400 text-sm truncate font-normal cursor-pointer"
                     onClick={() => {
                       window.location.href = 'mailto:mohdthoriq24@gmail.com';
                     }}
@@ -106,7 +111,7 @@ export default function Footer() {
                 <div className="pt-4">
                   <Separator className="mb-4" />
                   <span className="block text-[11px] uppercase tracking-wider text-slate-500 mb-3 font-medium">
-                    Socials
+                    {t.socials}
                   </span>
                   <div className="flex gap-2.5">
                     {SOCIAL_LINKS.map((social) => {
@@ -117,7 +122,7 @@ export default function Footer() {
                           variant="outline"
                           size="icon"
                           aria-label={social.name}
-                          className={`rounded-xl border-white/10 bg-slate-800/80 text-slate-400 transition-all duration-300 ${social.hoverColor}`}
+                          className={`rounded-xl border-white/10 bg-slate-800/80 text-slate-400 transition-all duration-300 cursor-pointer ${social.hoverColor}`}
                           onClick={() => window.open(social.href, '_blank', 'noopener,noreferrer')}
                         >
                           <Icon className="w-4 h-4" />
@@ -135,10 +140,12 @@ export default function Footer() {
         <Separator className="mb-6" />
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
           <Badge variant="secondary" className="bg-transparent border-none text-slate-500 font-normal">
-            © {new Date().getFullYear()} MUHAMMAD THORIQ — ALL RIGHTS RESERVED
+            © {new Date().getFullYear()} MUHAMMAD THORIQ — {t.rights}
           </Badge>
           <div className="flex items-center gap-2 text-slate-500">
-            <span>Built with React & Vite</span>
+            <span>{t.builtWith}</span>
+            <Separator orientation="vertical" className="h-3" />
+            <span className="text-cyan-400/80">Tailwind CSS & Shadcn UI</span>
           </div>
         </div>
       </div>

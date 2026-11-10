@@ -3,11 +3,13 @@ import { motion, AnimatePresence } from 'motion/react';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
 import { Card } from '../ui/card';
 import { Button } from '../ui/button';
+import { useLanguage } from '../../context/LanguageContext';
 import photo from '../../assets/logo.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 15);
@@ -15,7 +17,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
+  const navItems = [
+    { id: 'about', label: language === 'ID' ? 'Tentang' : 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experience', label: language === 'ID' ? 'Pengalaman' : 'Experience' },
+    { id: 'projects', label: language === 'ID' ? 'Proyek' : 'Projects' },
+    { id: 'contact', label: language === 'ID' ? 'Kontak' : 'Contact' },
+  ];
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id.toLowerCase());
@@ -50,34 +58,85 @@ export default function Navbar() {
         </motion.div>
 
         {/* Desktop Navigation using Shadcn Buttons within a Pill Card */}
-        <Card className="hidden md:flex items-center gap-1 p-1.5 rounded-24px bg-slate-900/60 backdrop-blur-md border-white/10 shadow-lg">
+        <Card className="hidden md:flex items-center gap-1 p-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border-white/10 shadow-lg">
           {navItems.map((item) => (
             <Button
-              key={item}
+              key={item.id}
               variant="ghost"
               size="sm"
               className="text-xs font-semibold rounded-full px-4 h-8 text-slate-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-              onClick={() => scrollToSection(item)}
+              onClick={() => scrollToSection(item.id)}
             >
-              {item}
+              {item.label}
             </Button>
           ))}
         </Card>
 
-        {/* CTA Contact Button on Desktop */}
-        <div className="hidden md:flex items-center gap-2">
+        {/* Right Section: Language Toggle & CTA Button on Desktop */}
+        <div className="hidden md:flex items-center gap-3">
+          {/* Language Switcher Toggle */}
+          <div className="flex items-center p-1 rounded-full bg-slate-900/70 border border-white/10 backdrop-blur-md">
+            <button
+              type="button"
+              onClick={() => setLanguage('ID')}
+              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${
+                language === 'ID'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              ID
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage('EN')}
+              className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${
+                language === 'EN'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              EN
+            </button>
+          </div>
 
           <Button
             size="sm"
             className="rounded-full bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs px-4 h-8 shadow-md shadow-blue-500/20"
             onClick={() => scrollToSection('contact')}
           >
-            Contact Me
+            {language === 'ID' ? 'Hubungi Saya' : 'Contact Me'}
           </Button>
         </div>
 
-        {/* Mobile Hamburger Toggle using Shadcn Button */}
+        {/* Mobile: Language Toggle + Hamburger Button */}
         <div className="md:hidden flex items-center gap-2">
+          {/* Mobile Language Switcher */}
+          <div className="flex items-center p-0.5 rounded-full bg-slate-900/80 border border-white/10">
+            <button
+              type="button"
+              onClick={() => setLanguage('ID')}
+              className={`px-2 py-0.5 text-[11px] font-bold rounded-full transition-all duration-200 ${
+                language === 'ID'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              ID
+            </button>
+            <button
+              type="button"
+              onClick={() => setLanguage('EN')}
+              className={`px-2 py-0.5 text-[11px] font-bold rounded-full transition-all duration-200 ${
+                language === 'EN'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
           <Button
             variant="outline"
             size="icon"
@@ -107,12 +166,12 @@ export default function Navbar() {
             <Card className="p-3 bg-slate-900/95 backdrop-blur-xl border-white/10 shadow-2xl flex flex-col gap-1 rounded-2xl">
               {navItems.map((item) => (
                 <Button
-                  key={item}
+                  key={item.id}
                   variant="ghost"
                   className="w-full justify-start text-sm font-medium text-slate-300 hover:text-white hover:bg-white/10 rounded-xl h-10 px-3"
-                  onClick={() => scrollToSection(item)}
+                  onClick={() => scrollToSection(item.id)}
                 >
-                  {item}
+                  {item.label}
                 </Button>
               ))}
               <div className="pt-2 border-t border-white/5 mt-1">
@@ -120,7 +179,7 @@ export default function Navbar() {
                   className="w-full rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold h-10"
                   onClick={() => scrollToSection('contact')}
                 >
-                  Contact Me
+                  {language === 'ID' ? 'Hubungi Saya' : 'Contact Me'}
                 </Button>
               </div>
             </Card>
