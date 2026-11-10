@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { ExternalLink } from 'lucide-react';
-import { PROJECTS } from '../../data';
 import {
   Card,
   CardHeader,
@@ -10,8 +9,14 @@ import {
 } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
+import { useLanguage } from '../../context/LanguageContext';
+import { TRANSLATIONS, PROJECTS_DATA } from '../../data/translations';
 
 export default function Projects() {
+  const { language } = useLanguage();
+  const t = TRANSLATIONS[language].projects;
+  const projects = PROJECTS_DATA[language];
+
   return (
     <section id="projects" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
       {/* Background Glow */}
@@ -21,22 +26,22 @@ export default function Projects() {
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
-            Featured Projects
+            {t.title}
           </h2>
           <div className="h-px bg-white/10 flex-grow max-w-xs ml-2" />
         </div>
 
         {/* Description */}
         <p className="text-base md:text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
-          Kumpulan aplikasi dan solusi digital yang telah saya kembangkan:
+          {t.description}
         </p>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PROJECTS.length > 0 ? (
-            PROJECTS.map((project, i) => (
+          {projects.length > 0 ? (
+            projects.map((project, i) => (
               <motion.div
-                key={project.id}
+                key={`${language}-${project.id}`}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -56,9 +61,10 @@ export default function Projects() {
                         <Button
                           size="sm"
                           variant="secondary"
-                          className="text-xs font-semibold gap-1.5 backdrop-blur-md bg-white/20 hover:bg-white/30 text-white"
+                          className="text-xs font-semibold gap-1.5 backdrop-blur-md bg-white/20 hover:bg-white/30 text-white cursor-pointer"
                           onClick={() => window.open(project.link, '_blank', 'noopener,noreferrer')}
                         >
+                          <span>{t.livePreview}</span>
                           <ExternalLink className="w-3.5 h-3.5" />
                         </Button>
                       </div>
@@ -90,7 +96,7 @@ export default function Projects() {
             ))
           ) : (
             <div className="text-slate-500 italic col-span-full py-8 text-center">
-              Belum ada data project...
+              {t.detailsComingSoon}
             </div>
           )}
         </div>

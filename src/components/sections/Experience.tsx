@@ -1,14 +1,18 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { COMPANY_EXPERIENCES } from '../../data';
 import { MapPin, Briefcase, Calendar, Building2, CheckCircle2 } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
 import { Badge } from '../ui/badge';
 import { Button } from '../ui/button';
+import { useLanguage } from '../../context/LanguageContext';
+import { TRANSLATIONS, COMPANY_EXPERIENCES_DATA } from '../../data/translations';
 
 export default function Experience() {
   const [activeTab, setActiveTab] = useState(0);
-  const activeCompany = COMPANY_EXPERIENCES[activeTab];
+  const { language } = useLanguage();
+  const t = TRANSLATIONS[language].experience;
+  const companyExperiences = COMPANY_EXPERIENCES_DATA[language];
+  const activeCompany = companyExperiences[activeTab] || companyExperiences[0];
 
   return (
     <section id="experience" className="py-28 px-6 scroll-mt-24 relative overflow-hidden">
@@ -19,27 +23,27 @@ export default function Experience() {
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
-            My Experiences
+            {t.title}
           </h2>
           <div className="h-px bg-white/10 flex-grow max-w-xs ml-2" />
         </div>
 
         <p className="text-base md:text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
-          My professional travel history, teaching and work experience:
+          {t.description}
         </p>
 
         {/* Tab & Details Grid */}
         <div className="flex flex-col md:flex-row gap-8 lg:gap-12 min-h-[380px]">
           {/* Left: Company Sidebar Navigation using Buttons */}
           <div className="flex md:flex-col overflow-x-auto md:overflow-visible border-b md:border-b-0 border-white/10 md:w-60 shrink-0 gap-2 pb-3 md:pb-0 scrollbar-none">
-            {COMPANY_EXPERIENCES.map((exp, idx) => {
+            {companyExperiences.map((exp, idx) => {
               const isActive = idx === activeTab;
               return (
                 <Button
                   key={exp.company}
                   variant={isActive ? 'default' : 'ghost'}
                   onClick={() => setActiveTab(idx)}
-                  className={`relative justify-start h-12 px-4 text-left transition-all rounded-xl font-medium ${
+                  className={`relative justify-start h-12 px-4 text-left transition-all rounded-xl font-medium cursor-pointer ${
                     isActive
                       ? 'bg-blue-600/20 text-blue-400 border border-blue-500/30 hover:bg-blue-600/25'
                       : 'text-slate-400 hover:text-white hover:bg-white/5 border border-transparent'
@@ -56,7 +60,7 @@ export default function Experience() {
           <div className="flex-grow">
             <AnimatePresence mode="wait">
               <motion.div
-                key={activeTab}
+                key={`${language}-${activeTab}`}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}

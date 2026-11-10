@@ -1,6 +1,8 @@
 import { motion } from 'motion/react';
 import { DATA_SKILLS } from '../../data/skill';
 import { Card, CardContent } from '../ui/card';
+import { useLanguage } from '../../context/LanguageContext';
+import { TRANSLATIONS } from '../../data/translations';
 
 const SKILL_LABELS: Record<string, string> = {
   html: 'HTML5',
@@ -15,6 +17,9 @@ const SKILL_LABELS: Record<string, string> = {
 };
 
 export default function Skills() {
+  const { language } = useLanguage();
+  const t = TRANSLATIONS[language].skills;
+
   return (
     <section id="skills" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
       {/* Background Glow */}
@@ -24,16 +29,17 @@ export default function Skills() {
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
-            Skills & Technologies
+            {t.title}
           </h2>
           <div className="h-px bg-white/10 flex-grow max-w-xs ml-2" />
         </div>
 
         {/* Description */}
         <p className="text-base md:text-lg text-slate-400 mb-10 max-w-2xl leading-relaxed">
-          Here are a few technologies and tools I've been working with recently:
+          {t.description}
         </p>
 
+        {/* Skills Pills: fit content, compact, font-mono styled like reference */}
         <div className="flex flex-wrap items-center gap-3">
           {DATA_SKILLS.map((skill, i) => {
             const Icon = skill.icon;
