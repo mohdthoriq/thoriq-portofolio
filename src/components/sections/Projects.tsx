@@ -18,7 +18,7 @@ export default function Projects() {
   const projects = PROJECTS_DATA[language];
 
   return (
-    <section id="projects" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+    <section id="projects" className="py-24 px-6 relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
 

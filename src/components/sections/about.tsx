@@ -11,7 +11,7 @@ export default function About() {
   const t = TRANSLATIONS[language].about;
 
   return (
-    <section id="about" className="py-24 px-6 relative overflow-hidden scroll-mt-24">
+    <section id="about" className="py-24 px-6 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full pointer-events-none" />
 

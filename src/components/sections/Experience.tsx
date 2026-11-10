@@ -15,7 +15,7 @@ export default function Experience() {
   const activeCompany = companyExperiences[activeTab] || companyExperiences[0];
 
   return (
-    <section id="experience" className="py-28 px-6 scroll-mt-24 relative overflow-hidden">
+    <section id="experience" className="py-28 px-6 relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[300px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
 

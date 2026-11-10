@@ -21,8 +21,8 @@ export const TRANSLATIONS = {
     },
     about: {
       title: 'About Me',
-      p1: 'Hello! My name is Muhammad Thoriq. I am a software developer with a strong foundation in architecting dynamic, responsive, and scalable web & mobile applications. My core expertise centers around the TypeScript & JavaScript ecosystem, React, Next.js, Node.js, and modern styling with Tailwind CSS.',
-      p2: 'Currently, my primary focus is on developing robust web solutions like Hotel Multazam, supply chain management systems (SCM), and responsive eCommerce platforms. In these projects, I design fullstack solutions, integrate business workflows, and deliver efficient, reliable user experiences.',
+      p1: 'Hello! My name is Muhammad Thoriq. I am a software developer with a strong focus on building responsive, interactive, and user-friendly web and mobile applications.  with primary expertise in React, Next.js, React Native, TypeScript, and modern styling with Tailwind CSS, alongside Node.js for backend services.',
+      p2: 'Currently, my day-to-day work involves creating practical digital products such as hotel reservation platforms, supply chain management systems (SCM), and responsive eCommerce point-of-sale apps. I take pride in writing maintainable code, integrating APIs smoothly, and delivering pleasant user experiences.',
       experienceCard: {
         years: '1+ Years',
         title: 'Development Experience',
@@ -62,7 +62,7 @@ export const TRANSLATIONS = {
         "I'm always open to collaboration, new projects, or just chatting about technology. Don't hesitate to say hello!",
       sayHello: 'Say Hello via Email',
       getInTouch: 'Get In Touch',
-      location: 'Jakarta, Indonesia',
+      location: 'Bogor, Jawa Barat, Indonesia',
       socials: 'Socials',
       rights: 'ALL RIGHTS RESERVED',
       builtWith: 'Built with React & Vite',
@@ -90,8 +90,8 @@ export const TRANSLATIONS = {
     },
     about: {
       title: 'Tentang Saya',
-      p1: 'Halo! Nama saya Muhammad Thoriq. Saya adalah seorang software developer dengan fondasi kuat dalam merancang aplikasi web dan mobile yang dinamis, responsif, dan scalable. Keahlian utama saya berpusat pada ekosistem TypeScript & JavaScript, React, Next.js, Node.js, dan Tailwind CSS.',
-      p2: 'Saat ini, fokus utama saya adalah mengembangkan solusi sistem web seperti reservasi kamar Hotel Multazam, sistem manajemen rantai pasok (SCM) gudang, dan platform point of sale interaktif. Melalui proyek-proyek ini, saya merancang solusi fullstack, mengintegrasikan proses bisnis yang kompleks, dan menghadirkan pengalaman pengguna yang efisien dan andal.',
+      p1: 'Halo! Nama saya Muhammad Thoriq. Saya adalah seorang software developer yang berfokus pada pengembangan aplikasi web dan mobile yang responsif, interaktif, dan nyaman digunakan. Dengan keahlian utama pada React, Next.js, React Native, TypeScript, styling modern dengan Tailwind CSS, serta Node.js untuk integrasi layanan backend.',
+      p2: 'Saat ini, aktivitas saya berpusat pada pembuatan produk digital praktis seperti sistem reservasi kamar hotel, manajemen rantai pasok (SCM) gudang, dan aplikasi point of sale e-commerce. Saya berfokus pada penulisan kode yang mudah dipelihara, integrasi API yang lancar, serta menghadirkan pengalaman pengguna yang cepat dan andal.',
       experienceCard: {
         years: '1+ Tahun',
         title: 'Pengalaman Pengembangan',
@@ -131,7 +131,7 @@ export const TRANSLATIONS = {
         'Saya selalu terbuka untuk kolaborasi, proyek baru, atau sekadar berbincang seputar teknologi. Jangan ragu untuk menyapa!',
       sayHello: 'Sapa Saya lewat Email',
       getInTouch: 'Hubungi Saya',
-      location: 'Jakarta, Indonesia',
+      location: 'Bogor, Jawa Barat, Indonesia',
       socials: 'Media Sosial',
       rights: 'HAK CIPTA DILINDUNGI',
       builtWith: 'Dibuat dengan React & Vite',
