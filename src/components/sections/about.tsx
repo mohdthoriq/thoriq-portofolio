@@ -18,7 +18,7 @@ export default function About() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-100">
             {t.title}
           </h2>
           <div className="h-px bg-white/10 flex-grow max-w-xs ml-2" />
