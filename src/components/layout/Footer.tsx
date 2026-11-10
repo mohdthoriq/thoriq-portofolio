@@ -29,18 +29,18 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="relative pt-28 pb-10 px-6 border-t border-white/10 overflow-hidden scroll-mt-24">
+    <footer id="contact" className="relative pt-24 pb-10 px-6 border-t border-white/10 overflow-hidden scroll-mt-24">
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mb-16">
-          {/* Main Col: Headline & Bio */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16 items-start">
+          {/* Left Col: Headline & Bio */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-6">
-              <Card className="w-11 h-11 p-2 bg-slate-900 border-white/10 rounded-xl flex items-center justify-center shadow-inner">
+              <Card className="w-11 h-auto flex items-center justify-center">
                 <img src={logo} alt="logo" className="w-full h-full object-contain" />
               </Card>
               <Badge variant="secondary" className="text-xs font-semibold px-3 py-1 bg-white/5 border-white/10 text-slate-300">
@@ -48,7 +48,7 @@ export default function Footer() {
               </Badge>
             </div>
 
-            <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold tracking-tight leading-tight text-slate-100 mb-6">
+            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-slate-100 mb-5">
               LET'S BUILD SOMETHING <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">
                 GREAT
@@ -71,56 +71,29 @@ export default function Footer() {
             </Button>
           </div>
 
-          {/* Right Col: Navigation & Contact Cards */}
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Quick Navigation Card */}
-            <Card className="bg-slate-900/40 backdrop-blur-sm border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
-              <CardHeader className="p-6 pb-2">
-                <CardTitle className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
-                  Navigation
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-6 pt-2 flex flex-col space-y-1">
-                {['About', 'Skills', 'Experience', 'Projects'].map((item) => (
-                  <Button
-                    key={item}
-                    variant="ghost"
-                    size="sm"
-                    className="justify-start px-2 h-9 text-slate-400 hover:text-cyan-400 hover:bg-white/5 transition-colors gap-2 text-sm font-medium"
-                    onClick={() => {
-                      const element = document.getElementById(item.toLowerCase());
-                      element?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-slate-600" />
-                    <span>{item}</span>
-                  </Button>
-                ))}
-              </CardContent>
-            </Card>
-
-            {/* Contact & Social Card */}
-            <Card className="bg-slate-900/40 backdrop-blur-sm border-white/10 hover:border-white/20 transition-all flex flex-col justify-between">
-              <CardHeader className="p-6 pb-2">
+          {/* Right Col: Contact & Social Card */}
+          <div className="lg:col-span-5">
+            <Card className="bg-slate-900/40 backdrop-blur-sm border-white/10 hover:border-white/20 transition-all">
+              <CardHeader className="p-6 pb-3">
                 <CardTitle className="text-xs uppercase tracking-widest text-slate-400 font-semibold">
                   Get In Touch
                 </CardTitle>
               </CardHeader>
-              <CardContent className="p-6 pt-2 space-y-3 text-sm text-slate-400">
-                <div className="flex items-center gap-2">
-                  <Badge variant="secondary" className="p-1.5 bg-white/5 border-white/10 text-cyan-400 rounded-md">
+              <CardContent className="p-6 pt-2 space-y-4 text-sm text-slate-400">
+                <div className="flex items-center gap-3">
+                  <Badge variant="secondary" className="p-2 bg-white/5 border-white/10 text-cyan-400 rounded-lg">
                     <HiOutlineLocationMarker className="w-4 h-4" />
                   </Badge>
-                  <span className="text-slate-300 text-xs sm:text-sm">Jakarta, Indonesia</span>
+                  <span className="text-slate-300 text-sm">Jakarta, Indonesia</span>
                 </div>
 
-                <div className="flex items-center gap-2">
-                  <Badge variant="secondary" className="p-1.5 bg-white/5 border-white/10 text-cyan-400 rounded-md">
+                <div className="flex items-center gap-3">
+                  <Badge variant="secondary" className="p-2 bg-white/5 border-white/10 text-cyan-400 rounded-lg">
                     <HiOutlineMail className="w-4 h-4" />
                   </Badge>
                   <Button
                     variant="link"
-                    className="h-auto p-0 text-slate-300 hover:text-cyan-400 text-xs sm:text-sm truncate font-normal"
+                    className="h-auto p-0 text-slate-300 hover:text-cyan-400 text-sm truncate font-normal"
                     onClick={() => {
                       window.location.href = 'mailto:mohdthoriq24@gmail.com';
                     }}
@@ -132,10 +105,10 @@ export default function Footer() {
                 {/* Social Icons using Shadcn Buttons + react-icons */}
                 <div className="pt-4">
                   <Separator className="mb-4" />
-                  <span className="block text-[11px] uppercase tracking-wider text-slate-500 mb-2 font-medium">
+                  <span className="block text-[11px] uppercase tracking-wider text-slate-500 mb-3 font-medium">
                     Socials
                   </span>
-                  <div className="flex gap-2">
+                  <div className="flex gap-2.5">
                     {SOCIAL_LINKS.map((social) => {
                       const Icon = social.icon;
                       return (
@@ -166,8 +139,6 @@ export default function Footer() {
           </Badge>
           <div className="flex items-center gap-2 text-slate-500">
             <span>Built with React & Vite</span>
-            <Separator orientation="vertical" className="h-3" />
-            <span className="text-cyan-400/80">Tailwind CSS & Shadcn UI</span>
           </div>
         </div>
       </div>

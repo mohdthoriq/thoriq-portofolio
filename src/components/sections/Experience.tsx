@@ -25,7 +25,7 @@ export default function Experience() {
         </div>
 
         <p className="text-base md:text-lg text-slate-400 mb-12 max-w-2xl leading-relaxed">
-          Riwayat perjalanan profesional, pengajaran, dan pengalaman kerja saya:
+          My professional travel history, teaching and work experience:
         </p>
 
         {/* Tab & Details Grid */}
