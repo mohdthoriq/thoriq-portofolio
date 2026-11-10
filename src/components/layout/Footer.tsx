@@ -6,7 +6,6 @@ import { Button } from '../ui/button';
 import { Separator } from '../ui/separator';
 import { useLanguage } from '../../context/LanguageContext';
 import { TRANSLATIONS } from '../../data/translations';
-import logo from '../../assets/logo.png';
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -34,7 +33,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer id="contact" className="relative pt-24 pb-10 px-6 border-t border-white/10 overflow-hidden scroll-mt-24">
+    <footer id="contact" className="relative pt-24 pb-10 px-6 border-t border-white/10 overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 blur-[140px] rounded-full" />
@@ -45,15 +44,12 @@ export default function Footer() {
           {/* Left Col: Headline & Bio */}
           <div className="lg:col-span-7 flex flex-col items-start">
             <div className="flex items-center gap-3 mb-6">
-              <Card className="w-11 h-11 p-2 bg-slate-900 border-white/10 rounded-xl flex items-center justify-center shadow-inner">
-                <img src={logo} alt="logo" className="w-full h-full object-contain" />
-              </Card>
               <Badge variant="secondary" className="text-xs font-semibold px-3 py-1 bg-white/5 border-white/10 text-slate-300">
                 {t.collab}
               </Badge>
             </div>
 
-            <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-slate-100 mb-5">
+            <div className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight leading-tight text-slate-100 mb-5">
               {t.headline1} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">
                 {t.headline2}
