@@ -22,10 +22,10 @@ export default function Projects() {
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Heading */}
         <div className="flex items-center gap-4 mb-4">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-100">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-slate-100">
             {t.title}
           </h2>
           <div className="h-px bg-white/10 flex-grow max-w-xs ml-2" />
