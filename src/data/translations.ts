@@ -226,7 +226,7 @@ export const COMPANY_EXPERIENCES_DATA = {
       link: 'https://pondokit.com',
       jobs: [
         {
-          role: 'Mentor',
+          role: 'Asst-Mentor',
           type: 'On-site · Contract',
           period: 'July 2026 — Present',
           duration: '11 mos',
@@ -244,7 +244,7 @@ export const COMPANY_EXPERIENCES_DATA = {
       link: 'https://pondokit.com',
       jobs: [
         {
-          role: 'Mentor',
+          role: 'Asst-Mentor',
           type: 'On-site · Kontrak',
           period: 'Juli 2026 — Sekarang',
           duration: '11 bln',

@@ -1,7 +1,8 @@
 import type { IconType } from 'react-icons';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
 import { TbBrandReactNative } from 'react-icons/tb';
-import { SiTailwindcss, SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { SiTailwindcss, SiTypescript, SiNextdotjs, SiPrisma, SiExpress } from 'react-icons/si';
+import { BiLogoPostgresql } from "react-icons/bi";
 
 export interface SkillItem {
   nama: string;
@@ -9,8 +10,6 @@ export interface SkillItem {
 }
 
 export const DATA_SKILLS: SkillItem[] = [
-  { nama: "html", icon: FaHtml5 },
-  { nama: "css", icon: FaCss3Alt, },
   { nama: "js", icon: FaJs },
   { nama: "tailwind", icon: SiTailwindcss },
   { nama: "typescript", icon: SiTypescript },
@@ -18,5 +17,8 @@ export const DATA_SKILLS: SkillItem[] = [
   { nama: "reactnative", icon: TbBrandReactNative },
   { nama: "nodejs", icon: FaNodeJs },
   { nama: "nextjs", icon: SiNextdotjs },
+  { nama: "postgresql", icon: BiLogoPostgresql},
+  { nama: "prisma", icon: SiPrisma},
+  { nama: "expressjs", icon: SiExpress}
 ];
 
