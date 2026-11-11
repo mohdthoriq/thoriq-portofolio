@@ -26,6 +26,7 @@ export interface JobRole {
 
 export interface CompanyExperience {
   company: string;
+  link?: string;
   jobs: JobRole[];
 }
 

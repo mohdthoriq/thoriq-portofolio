@@ -120,18 +120,6 @@ export default function Navbar() {
             <div className="flex items-center p-1 rounded-full bg-slate-900/80 border border-white/10 backdrop-blur-md">
               <button
                 type="button"
-                onClick={() => setLanguage('ID')}
-                className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${
-                  language === 'ID'
-                    ? 'bg-blue-600 text-white shadow-sm'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-                title="Bahasa Indonesia"
-              >
-                ID
-              </button>
-              <button
-                type="button"
                 onClick={() => setLanguage('EN')}
                 className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${
                   language === 'EN'
@@ -141,6 +129,18 @@ export default function Navbar() {
                 title="English"
               >
                 EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLanguage('ID')}
+                className={`px-2.5 py-1 text-xs font-bold rounded-full transition-all duration-200 cursor-pointer ${
+                  language === 'ID'
+                    ? 'bg-blue-600 text-white shadow-sm'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+                title="Bahasa Indonesia"
+              >
+                ID
               </button>
             </div>
 

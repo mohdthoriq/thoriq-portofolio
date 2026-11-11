@@ -222,6 +222,7 @@ export const COMPANY_EXPERIENCES_DATA = {
   EN: [
     {
       company: 'Pondok IT',
+      link: 'https://pondokit.com',
       jobs: [
         {
           role: 'Mentor',
@@ -239,6 +240,7 @@ export const COMPANY_EXPERIENCES_DATA = {
   ID: [
     {
       company: 'Pondok IT',
+      link: 'https://pondokit.com',
       jobs: [
         {
           role: 'Mentor',

@@ -134,15 +134,10 @@ export default function Footer() {
 
         {/* Footer Bottom Bar */}
         <Separator className="mb-6" />
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-medium">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-xs text-slate-500 font-medium">
           <Badge variant="secondary" className="bg-transparent border-none text-slate-500 font-normal">
             © {new Date().getFullYear()} MUHAMMAD THORIQ — {t.rights}
           </Badge>
-          <div className="flex items-center gap-2 text-slate-500">
-            <span>{t.builtWith}</span>
-            <Separator orientation="vertical" className="h-3" />
-            <span className="text-cyan-400/80">Tailwind CSS & Shadcn UI</span>
-          </div>
         </div>
       </div>
     </footer>

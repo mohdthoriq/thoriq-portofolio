@@ -72,11 +72,23 @@ export default function Experience() {
                     <CardHeader className="space-y-3 pb-4">
                       {/* Job Title and Company */}
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                        <CardTitle className="text-xl md:text-2xl font-bold text-white flex flex-wrap items-center gap-2">
+                        <CardTitle className="text-xl md:text-2xl font-semibold text-white flex flex-wrap items-center gap-2">
                           <span>{job.role}</span>
-                          <span className="text-blue-400 font-semibold text-lg">
-                            @ {activeCompany.company}
-                          </span>
+                          {activeCompany.link ? (
+                            <a
+                              href={activeCompany.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1.5 decoration-blue-500/40 hover:decoration-blue-400 underline-offset-4 cursor-pointer text-xl font-semibold"
+                              title={`Kunjungi ${activeCompany.company}`}
+                            >
+                              <span>@ {activeCompany.company}</span>
+                            </a>
+                          ) : (
+                            <span className="text-blue-400 font-semibold text-lg">
+                              @ {activeCompany.company}
+                            </span>
+                          )}
                         </CardTitle>
 
                         {job.duration && (
