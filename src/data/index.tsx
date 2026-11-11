@@ -60,6 +60,7 @@ export const EXPERIENCES: Experience[] = [];
 export const COMPANY_EXPERIENCES: CompanyExperience[] = [
   {
     company: "Pondok IT",
+    link: "https://pondokit.com",
     jobs: [
       {
         role: "Mentor",
