@@ -6,6 +6,7 @@ export const TRANSLATIONS = {
       experience: 'Experience',
       projects: 'Projects',
       contact: 'Contact',
+      resume: 'Resume',
       contactMe: 'Contact Me',
     },
     hero: {
@@ -75,7 +76,7 @@ export const TRANSLATIONS = {
       experience: 'Pengalaman',
       projects: 'Proyek',
       contact: 'Kontak',
-      contactMe: 'Hubungi Saya',
+      resume: 'Resume',
     },
     hero: {
       role: 'Software Developer',
