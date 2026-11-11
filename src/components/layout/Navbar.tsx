@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button } from '../ui/button';
 import { useLanguage } from '../../context/LanguageContext';
 import { HiOutlineMenuAlt3, HiOutlineX } from 'react-icons/hi';
-import { HiArrowRight, HiSparkles } from 'react-icons/hi2';
+import { HiOutlineDocumentText } from 'react-icons/hi2';
 import photo from '../../assets/logo.png';
 
 export default function Navbar() {
@@ -144,7 +144,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Glowing CTA Button with animated border beam */}
+            {/* Glowing Resume Button with animated border beam */}
             <div className="relative rounded-xl p-[1.5px] overflow-hidden group/btn">
               {/* Static border base */}
               <div
@@ -158,15 +158,21 @@ export default function Navbar() {
                 aria-hidden="true"
               />
 
-              <Button
-                variant="default"
-                size="sm"
-                onClick={(e) => handleSmoothScroll(e, '#contact')}
-                className="relative rounded-[11px] bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs gap-2 px-4 py-2 cursor-pointer shadow-md shadow-blue-500/25"
+              <a
+                href="/CV-Muhammad-Thoriq.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
               >
-                <span>{language === 'ID' ? 'Hubungi Saya' : 'Contact Me'}</span>
-                <HiArrowRight className="size-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
-              </Button>
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="relative rounded-[11px] bg-blue-600 hover:bg-blue-500 text-white font-medium text-xs gap-1.5 px-4 py-2 cursor-pointer shadow-md shadow-blue-500/25"
+                >
+                  <HiOutlineDocumentText className="size-4" />
+                  <span>Resume</span>
+                </Button>
+              </a>
             </div>
           </nav>
 
@@ -221,14 +227,20 @@ export default function Navbar() {
             </nav>
 
             <div className="pt-3 border-t border-white/10 flex flex-col gap-2.5">
-              <Button
-                onClick={(e) => handleSmoothScroll(e, '#contact')}
-                className="w-full rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white justify-center gap-2"
+              <a
+                href="/CV-Muhammad-Thoriq.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full"
               >
-                <HiSparkles className="size-4" />
-                <span>{language === 'ID' ? 'Hubungi Saya' : 'Contact Me'}</span>
-                <HiArrowRight className="size-4" />
-              </Button>
+                <Button
+                  className="w-full rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-500 text-white justify-center gap-2 cursor-pointer"
+                >
+                  <HiOutlineDocumentText className="size-4" />
+                  <span>Resume</span>
+                </Button>
+              </a>
             </div>
           </div>
         )}
