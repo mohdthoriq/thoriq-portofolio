@@ -103,7 +103,7 @@ export default function Navbar() {
             onClick={(e) => handleSmoothScroll(e, '#hero')}
             className="flex items-center gap-3 transition-opacity hover:opacity-90 cursor-pointer"
           >
-            <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center p-1.5 shadow-md">
+            <div className="w-10 h-10 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center shadow-md">
               <img src={photo} alt="Muhammad Thoriq Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
@@ -251,7 +251,7 @@ export default function Navbar() {
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-white/10">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center p-1.5 shadow-md">
+                    <div className="w-9 h-9 rounded-xl bg-slate-900 border border-white/10 flex items-center justify-center shadow-md">
                       <img src={photo} alt="Logo" className="w-full h-full object-contain" />
                     </div>
                     <span className="font-bold text-sm text-slate-100">
