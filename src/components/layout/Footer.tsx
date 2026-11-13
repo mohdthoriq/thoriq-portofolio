@@ -85,7 +85,18 @@ export default function Footer() {
                   <Badge variant="secondary" className="p-2 bg-white/5 border-white/10 text-cyan-400 rounded-lg">
                     <HiOutlineLocationMarker className="w-4 h-4" />
                   </Badge>
-                  <span className="text-slate-300 text-sm">{t.location}</span>
+                  <a
+                    href="https://maps.google.com/?q=Bantul,+Yogyakarta,+Indonesia"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-300 hover:text-cyan-400 text-sm transition-colors inline-flex items-center gap-2 group/loc cursor-pointer"
+                    title="Buka Google Maps"
+                  >
+                    <span>{t.location}</span>
+                    <span className="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">
+                      GMT+7
+                    </span>
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-3">

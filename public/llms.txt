@@ -1,0 +1,46 @@
+# Muhammad Thoriq - Software Developer
+> Fullstack & Mobile Software Developer specializing in TypeScript, React, Next.js, React Native, Tailwind CSS, and Node.js.
+
+## About
+- Full Name: Muhammad Thoriq
+- Profession: Software Developer / Frontend & Fullstack Engineer
+- Location: Bantul, Daerah Istimewa Yogyakarta, Indonesia
+- Primary Email: mohdthoriq24@gmail.com
+- Portfolio Website: https://muhammad-thoriq.vercel.app
+- GitHub: https://github.com/mohdthoriq
+- LinkedIn: https://linkedin.com/in/muhammad-thoriq-7744b1377
+
+## Core Technical Skills
+- Programming Languages: JavaScript, TypeScript, HTML5, CSS3
+- Frontend Frameworks & Libraries: React.js, Next.js, Tailwind CSS, Vite
+- Mobile App Development: React Native
+- Backend & Database: Node.js, RESTful APIs, Prisma ORM, PostgreSQL
+- Tools & Workflows: Git, GitHub, ADB Debugging, Responsive Web Design, Component-Driven Development
+
+## Work Experience
+- Role: Mentor (Web Development)
+- Organization: Pondok IT (Bantul, Yogyakarta, Indonesia)
+- Period: July 2026 - Present
+- Focus: Guiding students in mastering modern web development fundamentals, component architecture, and building production-ready projects.
+
+## Featured Portfolio Projects
+1. Hotel Multazam (https://hotel-multazam.vercel.app)
+   - Category: Hotel Reservation & Room Booking Platform
+   - Stack: React.js, Node.js
+   - Key Features: Real-time room availability, room categorization, booking flow, secure payment integration.
+
+2. SCM Management (https://scm-manajemen.vercel.app)
+   - Category: Supply Chain & Warehouse Inventory System
+   - Stack: Next.js
+   - Key Features: Inventory tracking, logistics inbound/outbound logging, stock reporting.
+
+3. Shop-cart (https://shop-cart-ten-sable.vercel.app)
+   - Category: E-Commerce & Point of Sale (POS) Web Platform
+   - Stack: React.js
+   - Key Features: Interactive shopping cart, instant transaction calculation, responsive catalog management.
+
+4. Finup (https://financiallevelup.vercel.app)
+   - Category: Financial Analytics & Personal Budget Dashboard
+   - Stack: Next.js
+   - Key Features: Visualized spending patterns, cash flow summaries, expense trend analytics.
+

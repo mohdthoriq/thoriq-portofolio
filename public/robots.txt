@@ -1,3 +1,23 @@
 User-agent: *
 Allow: /
+
+# AI Crawlers & LLM Search Agents (GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://muhammad-thoriq.vercel.app/sitemap.xml
